@@ -34,11 +34,8 @@ a = [7, 6, 5, 4]
 
 # YOUR CODE HERE
 
-def f3(a,b=0):
-    if b==0:
-        return a + 1
-    else:
-        return a + b
+def f3(a,b=1):
+    return a + b
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
