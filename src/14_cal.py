@@ -22,3 +22,18 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+myinput = sys.argv[1:]
+
+cdate = datetime.today()
+cyear = cdate.year
+cmonth = cdate.month
+
+if len(myinput) == 2:
+  print(calendar.prmonth(int(myinput[1]), int(myinput[0])))
+elif len(myinput) == 1:
+  print(calendar.prmonth(cyear, int(myinput[0])))
+elif len(myinput) == 0:
+  print(calendar.prmonth(cyear, cmonth))
+else:
+  print('Arguments expected to run file!')
